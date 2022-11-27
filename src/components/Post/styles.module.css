@@ -1,0 +1,70 @@
+.post {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--dark-background-color);
+}
+
+.input {
+    width: 100%;
+}
+
+.separator {
+    height: 3px;
+    background-color: var(--dark-text-color);
+    border: 1px var(--dark-text-color);
+}
+
+.separatorFirst {
+    width: 90%;
+    background-color: var(--dark-text-color);
+    border: 1px var(--dark-text-color);
+    height: 3px;
+}
+
+.postTitle {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.postText {
+    font-size: 1.8rem;
+}
+
+.postText::first-letter {
+  font-size: 4rem;
+  color: var(--dark-text-color);
+  float: left;
+  margin-right: 1rem;
+}
+
+.CommentSectionWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.update, .delete {
+    width: 100px;
+    height: 35px;
+    font-size: 1.23rem;
+    background-color: var(--semi-light-background-color);
+    border: 3px solid var(--dark-text-color);
+    border-radius: 5px;
+    color: var(--dark-text-color);
+    scale: 90%;
+}
+
+.update:hover, .delete:hover {
+    background-color: var(--dark-text-color);
+    color: var(--semi-light-background-color);
+    scale: 93%;
+    transition: 350ms;
+}

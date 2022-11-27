@@ -1,0 +1,80 @@
+.albumImages {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+img {
+    opacity: 80%;
+}
+
+.albumImages > img {
+    height: 50px;
+    width: 50px
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+  .active {
+    border: 2px solid var(--semi-light-background-color);
+    z-index: 1;
+    transform: scale(1.25);
+    transition: all 300ms;
+  }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .imageSlider {
+    position: relative;
+    width: 600px;
+    height: max-content;
+  }
+
+  .mainImg {
+    transition: all 500ms;
+  }
+
+  .actions {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .actions button {
+    background: #0000003d;
+    opacity: 20%;
+    border: none;
+    cursor: pointer;
+    height: 580px;
+    width: 80px;
+    margin-top: -420px;
+    transition:ease-in-out 300ms;
+  }
+
+  .actions > .forward {
+    border-radius: 100px 10px 10px 100px;
+  }
+
+  .actions > .back {
+    border-radius: 10px 100px 100px 10px;
+}
+
+  .actions {
+    display: flex;
+    align-items:baseline;
+    /* justify-content: center; */
+  }
+
+  .actions button:hover {
+    opacity: 95%;
+    color:aquamarine;
+  }

@@ -1,0 +1,7 @@
+.root {
+    margin-top: 20px;
+    color: var(--dark-text-color);
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    gap: 30px;
+}

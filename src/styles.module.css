@@ -1,0 +1,17 @@
+:root {
+    --light-text-color: #F7F7F7;
+    --dark-text-color: #625350;
+    --light-background-color: #E9ECF5;
+    --dark-background-color: #9DA387;
+    --semi-light-background-color: #E6E6CC;
+    --semi-dark-background-color: #ada988;
+}
+
+.default {
+    background-color: #f9f5e7;
+    font-family: 'Baskervville', serif;
+    color: #F7F7F7;
+    min-width: 104rem;
+    margin: 0;
+    padding: 0;
+}
