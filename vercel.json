@@ -1,9 +1,0 @@
-{
-    "build": {
-      "cmd": "webpack --config webpack.prod.js --mode production",
-      "env": {
-        "CI": "true"
-      }
-    },
-    "start": "webpack serve --open --config webpack.dev.js"
-  }
