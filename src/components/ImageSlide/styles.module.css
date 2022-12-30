@@ -24,12 +24,6 @@
   align-items: center;
 }
 
-.imageSlider {
-  position: relative;
-  width: 100%;
-  height: auto;
-}
-
 .mainImg {
   transition: all 500ms;
   width: 100%;

@@ -13,7 +13,7 @@ export const ImageSlide = ({ photos }) => {
     !index ? setIndex(images.length - 1) : setIndex(index - 1);
 
   return (
-    <div className={styles.imageSlider}>
+    <>
       <div id="actions" className={styles.actions}>
         <button
           id="back"
@@ -37,6 +37,6 @@ export const ImageSlide = ({ photos }) => {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 };
