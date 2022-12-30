@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve  --hot --open",
-    "build": "webpack --config webpack.config.js --mode production",
-    "server": "node server.js"
+    "start": "webpack serve --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js --mode production"
   },
   "keywords": [],
   "author": "",
@@ -14,19 +13,21 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
     "axios": "^0.24.0",
+    "chmod": "^0.2.1",
     "classnames": "^2.3.2",
     "dotenv-webpack": "^8.0.1",
     "react": "^18.2.0",
-    "react-beautiful-dnd": "^13.1.1",
-    "react-dnd": "^16.0.1",
-    "react-dnd-html5-backend": "^16.0.1",
     "react-dom": "^18.2.0",
-    "react-drag-drop-container": "^6.1.1",
+    "react-icons": "^4.7.1",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.3",
+    "react-toastify": "^9.1.1",
+    "react-tsparticles": "^2.6.0",
     "redux": "^4.2.0",
-    "redux-devtools-extension": "^2.13.9",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "tsparticles": "^2.6.0",
+    "tsparticles-preset-sea-anemone": "^2.6.0",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
@@ -37,9 +38,11 @@
     "dotenv": "^16.0.3",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "prettier": "2.8.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.0",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
   }
 }

@@ -1,46 +1,44 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client';
-import { useSelector } from 'react-redux';
-import { selectAreCommentsLoading, selectCommentEntities } from '../../store/comment/selectors';
-import { selectArePostsLoading, selectPostEntities, selectPostIds } from '../../store/post/selectors';
-import { CommentSection } from '../CommentSection/CommentSection';
-import { Post } from '../Post/Post';
+import React from "react";
+import { useSelector } from "react-redux";
+import {
+  selectArePostsLoading,
+  selectPostEntities,
+} from "../../store/post/selectors";
+import { Post } from "../Post/Post";
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 
 export const Posts = () => {
-    const isLoadingPosts = useSelector(selectArePostsLoading);
-    const isLoadingComments = useSelector(selectAreCommentsLoading);
+  const isLoadingPosts = useSelector(selectArePostsLoading);
 
-    if (isLoadingPosts || isLoadingComments) {
-        return <div>Loading</div>;
-    }
-
-    const posts = useSelector(selectPostEntities);
-    const comments = useSelector(selectCommentEntities);
-    const postIds = useSelector(selectPostIds);
-    const commentSections = postIds.map((postId) => {
-        return {
-            [postId]: Object.values(comments).filter(((comment) => comment.postId === postId)),
-        }
-    });
+  const posts = useSelector(selectPostEntities);
 
   return (
     <>
-    <div className={styles.wrap}>
-        <div className={styles.pageTitle}>
-            <h1 className={styles.pageTitle}>ARTICLES</h1>
-            <button className={styles.newPost}>+</button>
+      <div className={styles.wrap}>
+        <div className={styles.postsWrap} id="postsWrap">
+          {isLoadingPosts ? (
+            <>
+              <div className={styles["post-placeholder"]}></div>
+              <div className={styles["post-placeholder"]}></div>
+              <div className={styles["post-placeholder"]}></div>
+              <div className={styles["post-placeholder"]}></div>
+              <div className={styles["post-placeholder"]}></div>
+              <div className={styles["post-placeholder"]}></div>
+            </>
+          ) : (
+            Object.values(posts).map((postData) => {
+              return (
+                <div key={postData.id} data-key={postData.id}>
+                  <Link to={`/posts/${postData.id}`} className={styles.link}>
+                    <Post post={postData} editingOption={false} />
+                  </Link>
+                </div>
+              );
+            })
+          )}
         </div>
-        <div className={styles.postsWrap} data-key="postsWrap" id="postsWrap">
-            {Object.values(posts).map((post) => {
-                return (
-                    <div key={post.id} data-key={post.id} className={styles.post}>
-                        <Post post={post} commentSections={commentSections} />
-                    </div>
-                )
-            })}
-        </div>
-    </div>
+      </div>
     </>
-  )
-}
+  );
+};

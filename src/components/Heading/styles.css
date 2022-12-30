@@ -1,0 +1,16 @@
+.Typewriter__cursor {
+  color: orangered;
+  width: 0;
+  padding-left: 10px;
+  visibility: hidden;
+}
+
+.Typewriter__wrapper {
+  text-align: center;
+}
+
+.Typewriter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

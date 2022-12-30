@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Overpass");
+.headingWrap {
+  width: 100%;
+  height: 170px;
+  /* background: white; */
+  /* border: 4px solid black; */
+  border-radius: 5px;
+  transition: ease-out 280ms;
+  box-shadow: 1px 1px 30px #999999;
+  position: relative;
+  /* background-image: linear-gradient(to bottom right, #fc0345,#fc03b1,#4a03fc); */
+  /* background-image:linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0));  */
+  overflow: hidden;
+  width: 100%;
+  display: grid;
+  margin-bottom: 1rem;
+}
+
+.headingWrap input {
+  width: 95%;
+  margin-top: -20px;
+}
+
+.tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  z-index: 0; /* if you use -1 you have to set to `"window"` the interactivity.detectsOn property */
+  filter: blur(7px);
+  /* background: linear-gradient(to bottom right, #fc0345,#fc03b1,#4a03fc); */
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  font-size: 8rem;
+  font-weight: 700;
+  padding-top: 5px;
+  font-family: "Overpass", "serif";
+  color: white;
+  z-index: 1;
+  /* margin-right: -10%; */
+  /* -webkit-text-stroke: 1px black; */
+}
+
+@media (max-width: 1000px) {
+  .page-title {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .page-title {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 730px) {
+  .page-title {
+    font-size: 3.7rem;
+  }
+}

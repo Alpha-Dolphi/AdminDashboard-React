@@ -4,23 +4,23 @@ import {
   createEntityAdapter,
   createSlice,
 } from "@reduxjs/toolkit";
-import axios from 'axios';
-import { selectPhotoIds } from "./selectors";
+import axios from "axios";
+import { selectPhotoIds, selectPhotosByAlbumId } from "./selectors";
 
 export const fetchPhotos = createAsyncThunk(
   "photo/fetchPhotos",
   async (albumId, { getState, rejectWithValue }) => {
-    if (selectPhotoIds(getState())?.length > 0) {
-        return rejectWithValue(LoadingStatuses.earlyAdded);
+    if (selectPhotosByAlbumId(getState(), albumId).length > 0) {
+      return rejectWithValue(LoadingStatuses.earlyAdded);
     }
 
     try {
-        const response = await axios.get(
-          `${process.env.API_URL}/albums/${albumId}/photos`
-        );
-        return await response.data;
+      const response = await axios.get(
+        `${window.API_URL}/albums/${albumId}/photos`
+      );
+      return await response.data;
     } catch (error) {
-        return rejectWithValue({ error: error.message });
+      return rejectWithValue({ error: error.message });
     }
   }
 );

@@ -14,5 +14,6 @@ export const selectAlbumsLoadingStatus = (state) =>
   selectAlbumsModuleState(state)?.status;
 
 export const selectAreAlbumsLoading = (state) =>
-[LoadingStatuses.inProgress, LoadingStatuses.idle].includes(
-  selectAlbumsLoadingStatus(state))
+  [LoadingStatuses.inProgress, LoadingStatuses.idle].includes(
+    selectAlbumsLoadingStatus(state)
+  );

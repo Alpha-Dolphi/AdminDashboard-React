@@ -1,9 +1,10 @@
 .root {
-    display: flex;
-    flex-direction: column;
+  display: flex;
 }
 
 .content {
-    display: flex;
-    margin: auto;
+  position: relative;
+  padding: 2rem;
+  padding-top: 1rem;
+  width: 100%;
 }

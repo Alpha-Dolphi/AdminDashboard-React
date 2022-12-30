@@ -1,7 +1,23 @@
 .root {
-    margin-top: 20px;
-    color: var(--dark-text-color);
-    display: grid;
-    grid-template-columns: repeat(2, 600px);
-    gap: 30px;
+  color: var(--dark-text-color);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.album {
+  box-shadow: 1px 1px 10px var(--box-shadow);
+  border-radius: 15px 15px 0 0px;
+}
+
+@media (max-width: 1000px) {
+  .root {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 780px) {
+  .root {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
 }

@@ -4,27 +4,21 @@ import {
   createEntityAdapter,
   createSlice,
 } from "@reduxjs/toolkit";
-import { selectAlbumIds } from "./selectors";
-import axios from 'axios';
+import axios from "axios";
 
 export const fetchAlbums = createAsyncThunk(
   "album/fetchAlbums",
-  async (_, { getState, rejectWithValue }) => {
-    if (selectAlbumIds(getState())?.length > 0) {
-        return rejectWithValue(LoadingStatuses.earlyAdded);
-    }
-
+  async ({ limit, page }, { getState, rejectWithValue }) => {
     try {
-        const response = await axios.get(
-          `${process.env.API_URL}/albums/`
-        );
-        return await response.data;
+      const response = await axios.get(
+        `${window.API_URL}/albums?_limit=${limit}&_page=${page}`
+      );
+      const data = await response.data;
+      return response;
     } catch (error) {
-        return rejectWithValue({ error: error.message });
+      return rejectWithValue({ error: error.message });
     }
   }
-
-
 );
 
 const albumEntityAdapter = createEntityAdapter();
@@ -40,7 +34,7 @@ export const albumSlice = createSlice({
         state.status = LoadingStatuses.inProgress;
       })
       .addCase(fetchAlbums.fulfilled, (state, { payload }) => {
-        albumEntityAdapter.addMany(state, payload);
+        albumEntityAdapter.addMany(state, payload.data);
         state.status = LoadingStatuses.success;
       })
       .addCase(fetchAlbums.rejected, (state, { payload }) => {

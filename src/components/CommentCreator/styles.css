@@ -1,0 +1,32 @@
+.comment-creator {
+  display: grid;
+  gap: 5px;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid #c6c9cb;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  box-shadow: 1px 1px 30px var(--box-shadow);
+}
+
+.comment-creator textarea {
+  border-radius: 2px;
+}
+
+.comment-creator button {
+  border: 1px solid #c6c9cb;
+  width: 100%;
+  border-radius: 2px;
+  font-family: system-ui, serif;
+  font-weight: 500;
+  background-color: var(--dark-text-color);
+  color: #eeeeee;
+  transition: 100ms;
+  font-size: 1.2rem;
+  padding-bottom: 3px;
+  cursor: pointer;
+}
+
+.comment-creator button:hover {
+  color: #eeeeee;
+}

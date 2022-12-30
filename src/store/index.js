@@ -1,4 +1,4 @@
-import logger from 'redux-logger'
+import logger from "redux-logger";
 import { combineReducers } from "redux";
 import { postSlice } from "./post";
 import { configureStore } from "@reduxjs/toolkit";
@@ -18,5 +18,5 @@ const rootReducer = combineReducers({
 export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(logger),
+    getDefaultMiddleware({ serializableCheck: false }).concat(logger),
 });

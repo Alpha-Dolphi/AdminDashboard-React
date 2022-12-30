@@ -14,5 +14,6 @@ export const selectTodosLoadingStatus = (state) =>
   selectTodosModuleState(state)?.status;
 
 export const selectAreTodosLoading = (state) =>
-[LoadingStatuses.inProgress, LoadingStatuses.idle].includes(
-  selectTodosLoadingStatus(state))
+  [LoadingStatuses.inProgress, LoadingStatuses.idle].includes(
+    selectTodosLoadingStatus(state)
+  );

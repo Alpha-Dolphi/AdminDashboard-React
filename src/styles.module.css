@@ -1,17 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Overpass");
+@import url("//fonts.googleapis.com/css?family=Fanwood+Text");
+
 :root {
-    --light-text-color: #F7F7F7;
-    --dark-text-color: #625350;
-    --light-background-color: #E9ECF5;
-    --dark-background-color: #9DA387;
-    --semi-light-background-color: #E6E6CC;
-    --semi-dark-background-color: #ada988;
+  --light-text-color: #fdfdfd;
+  --dark-text-color: #1a1a1b;
+  --light-background-color: #65ccb8;
+  --dark-background-color: #1a1a1b;
+  --semi-light-background-color: #57ba98;
+  --semi-dark-background-color: #3b9454;
+  --textarea-outline: #8bcbd8b9;
+  --box-shadow: #999999;
 }
 
 .default {
-    background-color: #f9f5e7;
-    font-family: 'Baskervville', serif;
-    color: #F7F7F7;
-    min-width: 104rem;
-    margin: 0;
-    padding: 0;
+  background: repeat scroll 0 0 #f8f7f7;
+  font-family: system-ui, serif;
+  color: var(--dark-text-color);
+  min-width: 400px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.default * {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none;
 }
