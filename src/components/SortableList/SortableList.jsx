@@ -69,7 +69,7 @@ export class SortableList extends React.Component {
   saveTodoOnClick = (event) => {
     const task = event.target.closest("[data-class='sortable-list-item']");
     const inputValue = task.lastChild.lastChild.value;
-    console.error(task.parentNode);
+
     const userId = task.attributes["data-userid"]?.value;
     const completed = task.parentNode.id === "completedTodos" ? true : false;
 
