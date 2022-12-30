@@ -71,10 +71,7 @@ export const addComment = createAsyncThunk(
   "comment/addComment",
   async ({ id, data }, { getState, rejectWithValue }) => {
     try {
-      const response = await axios.post(
-        `${window.API_URL}/comments`,
-        data
-      );
+      const response = await axios.post(`${window.API_URL}/comments`, data);
       return await response.data;
     } catch (error) {
       return rejectWithValue({ error: error.message });

@@ -24,9 +24,7 @@ export const deleteTodo = createAsyncThunk(
   "todo/deleteTodo",
   async (todoId, { getState, rejectWithValue }) => {
     try {
-      const response = await axios.delete(
-        `${window.API_URL}/Todos/${todoId}`
-      );
+      const response = await axios.delete(`${window.API_URL}/Todos/${todoId}`);
       return todoId;
     } catch (error) {
       return rejectWithValue({ error: error.message });

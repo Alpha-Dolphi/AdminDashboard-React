@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TodoPageContent from "../../components/TodoPageContent/TodoPageContent";
 
-export const TodosPage = () => {
+const TodosPage = () => {
   return (
     <>
       <Heading name={"TODOS PAGE"} />
@@ -13,3 +13,5 @@ export const TodosPage = () => {
     </>
   );
 };
+
+export default TodosPage;

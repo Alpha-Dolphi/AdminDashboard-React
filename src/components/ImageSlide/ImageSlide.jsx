@@ -26,7 +26,7 @@ export const ImageSlide = ({ photos }) => {
           onClick={() => next()}
         ></button>
       </div>
-      <img className={styles.mainImg} src={images[index]} />
+      <img className={styles.mainImg} src={images[index]}  loading="lazy"/>
       <div className={styles.albumImages}>
         {images.map((srcImage, i) => (
           <img
@@ -34,6 +34,7 @@ export const ImageSlide = ({ photos }) => {
             src={srcImage}
             onClick={() => setIndex(i)}
             className={index === i ? styles.active : ""}
+            loading="lazy"
           />
         ))}
       </div>

@@ -1,20 +1,20 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    app: './src/index.js',
+    app: "./src/index.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: "Your custom title",
-      template: './src/index.html'
-    })
-],
+      template: "./src/index.html",
+    }),
+  ],
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
     clean: true,
   },
   resolve: {
@@ -38,12 +38,21 @@ module.exports = {
       },
     ],
   },
+  performance: {
+    maxEntrypointSize: 600000,
+    maxAssetSize: 600000
+},
   devServer: {
     historyApiFallback: true,
     static: {
-      directory: path.join(__dirname, 'public'),
+      directory: path.join(__dirname, "public"),
     },
     compress: true,
     port: 9000,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
   },
 };

@@ -43,10 +43,11 @@ export const Albums = () => {
     const scrollHandler = () => {
       if (
         document.body.scrollHeight -
-          (document.body.scrollTop + window.innerHeight) <
+          (document.documentElement.scrollTop + window.innerHeight) <
           100 &&
         currentAlbumsLength.current < albumsLength.current
       ) {
+        console.error("HERE");
         if (!fetch) {
           setFetch(true);
         }

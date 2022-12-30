@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Heading } from "../../components/Heading/Heading";
 
-export const PostsPage = () => {
+const PostsPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,3 +23,5 @@ export const PostsPage = () => {
     </>
   );
 };
+
+export default PostsPage;

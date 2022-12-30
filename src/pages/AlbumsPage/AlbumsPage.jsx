@@ -2,7 +2,7 @@ import React from "react";
 import { Albums } from "../../components/Albums/Albums";
 import { Heading } from "../../components/Heading/Heading";
 
-export const AlbumsPage = () => {
+const AlbumsPage = () => {
   return (
     <>
       <Heading name={"ALBUMS PAGE"} />
@@ -10,3 +10,5 @@ export const AlbumsPage = () => {
     </>
   );
 };
+
+export default AlbumsPage;
