@@ -47,7 +47,6 @@ export const Albums = () => {
           100 &&
         currentAlbumsLength.current < albumsLength.current
       ) {
-        console.error("HERE");
         if (!fetch) {
           setFetch(true);
         }

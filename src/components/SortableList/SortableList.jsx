@@ -33,7 +33,6 @@ export class SortableList extends React.Component {
     const id = event.target.closest("[id]").id;
 
     this.dispatch(deleteTodo(id)).then((item) => {
-      console.error(this.completedTodos);
       this.setState({
         completedTodos: Object.values(this.state.completedTodos).filter(
           (item) => +item.id !== +id
@@ -417,13 +416,13 @@ export class SortableList extends React.Component {
                       <MdIcons.MdOutlineExitToApp
                         data-class="icon"
                         data-index={index}
-                        onClick={(event) => this.interactTodoOnClick(event)}
+                        onPointerDown={(event) => this.interactTodoOnClick(event)}
                         className={styles.quit}
                       />
                       <MdIcons.MdOutlineSaveAlt
                         data-class="icon"
                         data-index={index}
-                        onClick={(event) => this.saveTodoOnClick(event)}
+                        onPointerDown={(event) => this.saveTodoOnClick(event)}
                         className={styles.save}
                       />
                     </>
@@ -431,7 +430,7 @@ export class SortableList extends React.Component {
                     <HiIcons.HiOutlinePencilAlt
                       data-class="icon"
                       data-index={index}
-                      onClick={this.interactTodoOnClick}
+                      onPointerDown={this.interactTodoOnClick}
                       className={styles.update}
                     />
                   )}
@@ -439,7 +438,7 @@ export class SortableList extends React.Component {
                     data-class="icon"
                     id={item.id}
                     data-index={index}
-                    onClick={(event) => this.deleteTodoOnClick(event)}
+                    onPointerDown={(event) => this.deleteTodoOnClick(event)}
                     className={styles.delete}
                   />
                 </div>
