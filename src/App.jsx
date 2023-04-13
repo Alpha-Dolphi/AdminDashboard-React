@@ -3,12 +3,8 @@ import { Provider } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Layout } from "./components/Layout/Layout";
 import { NotFound } from "./pages/NotFound/NotFound";
-// import PostsPage  from "./pages/PostsPage/PostsPage";
-// import TodosPage from "./pages/TodosPage/TodosPage";
-// import AlbumsPage from "./pages/AlbumsPage/AlbumsPage";
 import { store } from "./store";
 import styles from "./styles.module.css";
-// import PostPage from "./pages/PostPage/PostPage";
 import { HomePage } from "./pages/HomePage/HomePage";
 
 const App = () => {
