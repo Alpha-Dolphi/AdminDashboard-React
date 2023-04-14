@@ -2,7 +2,7 @@
 
 ![React version](https://img.shields.io/badge/React-v18.2.0-orange)
 ![Webpack](https://img.shields.io/badge/Webpack-v5.75.0-purple)
-![@reduxjs/toolkit](https://img.shields.io/badge/@reduxjs/toolkit-v1.9.0-purple)
+![@reduxjs/toolkit](https://img.shields.io/badge/@reduxjs/toolkit-v1.9.0-blue)
 
 ---
 
@@ -14,12 +14,12 @@
 
 Here's a preview of my project in action:
 
-![Screenshot of my project](https://lh3.googleusercontent.com/ppRqQHGZQZ150kXvX-PT9MLJt4w8IHA3_rVVipZO1X7jspGxhlL7ar__fx0FRrwIyCmNVhNlWo-whMm8apd--3ZZ0q9nNv80wkwcBig6mhDz5_1roGwRsPdqbxc7OrNdUr1VBZmkZUkUe13CGKgDxGjjyNPa3XVqw8VKfSCzO664YmvMcgM2mbbpq1-5PYKBkv1uGTIEOwxxr063RW8gVl5TWLqQfSGS7BC6_4m2XK-6_ws20TM0C15ugMT2cLKA-L84QTSPqlSA-KlY5jufMuk3yHl5hFIb7n-72hM6P3fJWB-3ui4wGwnUrMI4KZZxnnprFF_oVkMhX3Cd8dngoQ4yhopxakZpOtRRcFeDO3QmjH57a6SI23iAjtWIAPs7auMNIhOQ5mbxP6t6fjLjX1Ek-g4wFJdir8gbgsM7wlVZz6VD36M8VJlWtA4ofKmMhfmVy6l5B2xoaLH91iqVJHGwLKZHNdY1YxABU-NqK_UstWj1MV2tBUV_0VNFkM4LBlKrY1xoK6JG0j1UyY9Jze6PSsBBNsSe2Wxqerfu5ZqFhrL8yMStJ3MEdXElP5VvGgJcBXNH5ogAYsY9tuzcVvQrezO2pqwl9Q42MvsxDaGdZakt_Um4ZREG51yYCd5RW3H2vWa9Q8tc1ViT_IMtVTugMBNlLI6xyzgRKSMJJsVzlMpJhXFub_6thoUCM_rv4tzmAXDkXsE2MJZLU2CmiiEtRefU8V1BLjpYyc0mQobqtDXMV9iCp9_Z8jAibDY2GHoZKsGOl-21w4wvQ_OFk_QjVOS4Ra4MaLsQMXFo84Rw6-uUK7sRgUz9eZMDXo9dSPA9eu8uKcEWt7tEJATnKCe15hXDo4XdxhFzDAqpeKeRcFqXdGE-RPmumbPjy5tUFkDr6jEBv4v6f5SdhIB_ZCGfb8C8mXVWv4PS_mtYHBeTtgO07tCJyMazUjU6tjCyYjdkZHCY46TEfL7EMzMt=w336-h220-no?authuser=0)
+![Screenshot of my project](https://lh3.googleusercontent.com/4XJQ8SFMWkmO-bE6I6nm27ZGiFCuH_nzOs_L0xXiwy2Ejyq3FEDDx-TJPTfYa3GD56hFqQH1X1m4F3dOYDStzqSFKJJtZmkroFYzWQKJZK5s0K3pDfhhcLNiqn8Q30k3PnvUAtKFmOqoHxpiAFXXxtaeZh0hVi8N6p3xyVYEFvZCJRO6kJewA38-VW59DxY9TNfwGb8ptng9iGgn0QK1plLJIMxBHoTT-R8xVhAjqbdo7N1XP4tvVrmMH_9ftJJ6UAqecTPpc6tgKrxJAr9D1qCpVCDo8J5Wz_Nv3Z7L9wDpW8vLK-VnQTCikQWwctmQPqD8yzzzyF9x-LrNxg9FEXIOoYHucSyx-282D0cmXeOLxuP0hRTmL3v2Pm7y3cLYxqMbi7rjWqynnYIq_p4qzFmpTU4Vl6daCj1_ZJ_rCE6FkT10NDWeDxkSf4uMe-uLdHB38Z6Am7MYsW6GhNmk8ybKpgVpSEZjJZZparyOifsF6pE2Cp1nyZdpD0tJgkNh8cumTNkTB6ngehEoQhb-3zgCoNiZ_xcUZaTKkTP1weCBVUGuUxjelsbj8966dFC_GECnUA_Xsrb4nmRpzqqFIy3iTGsVp9TMSFpkjMKUM2E0-wHrCAaiFSo5uHEKu5-kjLgnZ5horrWbN1wmQe893wR-bsf2DLmG-A33uhcWTwt0kcEJ1mrt98RQYA83hwtb4HFAGiwFAHlhRpV5e3Ncm4nONosXQsKvd-7BBf5X5WsxOW2PZ-8TqGYQ89kXJbp8KuD1MFmVKO1TbWQLEVoYE22eOngB-md3dbT1EaaWx8SfnGSMs9nOa4sroINGKTdbHCzy5QQtY_XhzQGN_htUTAqiTVUUVIVNnpB7IM138Xm2D9LtwfYY23P7ZWZoGZIQIyYj7yIYbRsd2wt7YWLVI49fJqFgTdK6EXmKI70fCh2L2dIAolUHjLcK4ua_fo2JNtBv2tnq4IU0E0tlq7Pq=w1616-h856-s-no?authuser=0)
 
 ## Entities
 
-- **Post**, вместе с комментариями
-- **Album**, вместе с фотографиями
+- **Post**
+- **Album**
 - **Todo**
 
 ## Task
